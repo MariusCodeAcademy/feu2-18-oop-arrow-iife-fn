@@ -8,3 +8,7 @@
 4. Employee prideti metoda work() kuris prideda tiek valandu prie hoursWorked, kiek paduodam i argumenta.
 5. sukurti metoda calcPay() kuris paskaiciuoja kiek darbuotojui priklauso pinigu uz isdirbtas valandas.
 6. sukurti metoda payForWork() kuris grazina kiek pinigu sumoketi ir nunulina valandas (hoursWorked)
+
+## Movie
+
+1. prie Movie prideti metoda getProfitTimes() kuris grazina kiek kartu atsipirko filmas

@@ -1,13 +1,17 @@
 class Student {
+  // statine savybe, prideta prie pacios klases o ne prie sukurtu objektu
+  static studList = document.getElementById('studs');
+  static stCount = 0;
   // constructor vyksta sukuriant nauja objekta su new
   constructor(argName, argYear, argHomeTown) {
     console.log('student created');
-    this.studList = document.getElementById('studs');
+    // this.studList = document.getElementById('studs');
     this.name = argName;
     this.year = argYear;
     this.town = argHomeTown;
     this.printStudent();
     this.courses = [];
+    Student.stCount++;
   }
 
   getMathMarks() {
@@ -25,7 +29,7 @@ class Student {
   printStudent() {
     const liEl = document.createElement('li');
     liEl.textContent = this.sayHi();
-    this.studList.append(liEl);
+    Student.studList.append(liEl);
   }
 
   addCourse(subject) {
