@@ -1,3 +1,5 @@
+'use strict';
+console.log('student.js');
 class Student {
   // constructor vyksta sukuriant nauja objekta su new
   constructor(argName, argYear, argHomeTown) {
@@ -22,16 +24,27 @@ class Student {
     liEl.textContent = this.sayHi();
     studsEl.append(liEl);
   }
-  // addCourse()
+
+  addCourse(subject) {
+    this.courses.push(subject);
+    console.log(subject, 'was added to', this.name);
+  }
+
+  // removeCourse() -
+  // pasitikrinti ar yra toks dalykas kursuose
+  // jei yra pasalinam ir pransam su console
+  // jei nera pranesam kad tokio nera
 }
 
 const studsEl = document.getElementById('studs');
 
 const st1 = new Student('James', 2, 'Lodon');
 // sukurti metoda addCourse() kuris prides viena kursa pries studento esamu
-// st1.addCourse('Math');
+st1.addCourse('Math');
+// st1.removeCourse('Gymnastics');
 
 const st2 = new Student('Jane', 3, 'NY');
+st2.addCourse('Gymnastics');
 // st1.printStudent();
 // st2.printStudent();
 st1.sayHi();
