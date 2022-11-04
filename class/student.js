@@ -7,7 +7,11 @@ class Student {
     this.year = argYear;
     this.town = argHomeTown;
     this.printStudent();
-    this.courses = ['english'];
+    this.courses = [];
+  }
+
+  getMathMarks() {
+    return this.courses[0].avg();
   }
 
   sayHi() {
@@ -26,7 +30,7 @@ class Student {
 
   addCourse(subject) {
     this.courses.push(subject);
-    console.log(subject, 'was added to', this.name);
+    console.log(subject.title, 'was added to', this.name);
   }
 
   // removeCourse() -
