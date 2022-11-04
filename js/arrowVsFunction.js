@@ -9,13 +9,13 @@ function sumD(a, b) {
   console.log('this declaration ===', this);
   return a + b;
 }
-// sumD();
+sumD();
 // expresion - not hoisted - turim pirma aprasyt tada naudot
 const sumE = function (a, b) {
   console.log('this expresion ===', this);
   return a + b;
 };
-// sumE();
+sumE();
 // arrow - not hoisted - THIS - nekuria this contexto
 const sumA = (a, b) => {
   console.log('this arrow ===', this);
