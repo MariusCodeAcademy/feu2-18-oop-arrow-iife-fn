@@ -30,7 +30,15 @@ class Student {
   }
 
   // removeCourse() -
-  // pasitikrinti ar yra toks dalykas kursuose
-  // jei yra pasalinam ir pransam su console
-  // jei nera pranesam kad tokio nera
+  removeCourse(subject) {
+    // pasitikrinti ar yra toks dalykas kursuose
+    if (this.courses.includes(subject)) {
+      // jei yra pasalinam ir pransam su console
+      this.courses = this.courses.filter((oneSubject) => oneSubject !== subject);
+      console.log(`${subject} was removed from ${this.name}`);
+    } else {
+      // jei nera pranesam kad tokio nera
+      console.log(`${this.name} does not have ${subject} subject `);
+    }
+  }
 }
